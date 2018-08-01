@@ -1,0 +1,6 @@
+<div>
+   <h4>Name: {{todo?.title}}</h4>
+  <h4>Completed: <span [ngClass]="todo?.isCompleted?'green-background':'red-background'">{{todo?.isCompleted}}</span></h4>
+</div>
+<!--update todo -->
+<app-todo-edit [todo]="todo" *ngIf="todo" (onUpdateTodo)="onUpdateTodo($event)"></app-todo-edit>

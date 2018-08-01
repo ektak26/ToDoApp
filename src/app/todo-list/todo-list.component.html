@@ -1,0 +1,12 @@
+<div>
+  <a routerLink="/add">Add New Todo</a>
+</div>
+<div>
+  <ul>
+    <li *ngIf="todos && todos.length==0">No todo(s) found.</li>
+    <li *ngFor="let todo of todos" ><span [ngClass]="todo?.isCompleted?'status-box green-background':'status-box red-background'"> </span> &nbsp;<a [routerLink]="['/detail',todo.id]">{{todo.id}}</a>&nbsp;<span appHighlight> {{todo.title}}</span>
+    &nbsp;<button type="button" (click)="deleteTodo(todo.id)">Delete</button>
+
+    </li>
+  </ul>
+</div>

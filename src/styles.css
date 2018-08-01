@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+.error-message{
+  color: red;
+}
+
+.green-background{
+  background-color: green;
+}
+
+.red-background{
+  background-color: red;
+}
+
+.status-box{
+  float: left;
+  width:20px;
+  height: 20px;
+}
+

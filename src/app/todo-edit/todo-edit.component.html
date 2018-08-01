@@ -1,0 +1,10 @@
+<form [formGroup]="todoForm" (ngSubmit)="updateTodo()">
+
+  Name:&nbsp; <input type="text" formControlName="title" [(ngModel)]="todoObj.title" required >
+  <br>
+  <span *ngIf="!todoForm.controls.title.valid && todoForm.controls.title.touched" class="error-message">Please enter name</span>
+  <br>
+
+  Completed <input type="checkbox" formControlName="isCompleted" [(ngModel)]="todoObj.isCompleted" ><br>
+  <button type="submit" [disabled]="!todoForm.valid">Update</button>
+</form>
